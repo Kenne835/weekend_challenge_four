@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- Most basic Angular app -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Weekend Four Challenge</title>
+  <script type="text/javascript" src="vendors/angular.js"></script>
+  <script type="text/javascript" src="scripts/client.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-app="myApp">
+  <h1>My Gallery</h1>
+  <div ng-controller="ImageController as like">
+    <table align="center">
+      <tr>
+        <td><span ng-show="ImageOne">
+          <img ng-click="toggleImageOne()" ng-src="images/Kids.jpeg" height="350" width="425" alt=""/>
+        </span>
+        <span ng-hide="ImageOne">
+          <img ng-click="toggleImageOne()" ng-src="images/Afghanistan.jpg" height="350" width="425" alt=""/>
+        </span>
+        <div class="Likes">
+          <button id="1" ng-click="countOne(1)">Like</button>
+          <label>{{counterOne}} people like this!</label>
+        </div></td>
+
+        <td><span ng-show="ImageTwo">
+          <img ng-click="toggleImageTwo()" ng-src="images/Packer Game.jpg" height="350" width="225" alt=""/>
+        </span>
+        <span ng-hide="ImageTwo">
+          <img ng-click="toggleImageTwo()" ng-src="images/Packers.jpg" height="350" width="225" alt=""/>
+        </span>
+        <div class="Likes">
+          <button id="2" ng-click="countTwo(1)">Like</button>
+          <label>{{counterTwo}} people like this!</label>
+        </div></td>
+
+        <td><span ng-show="ImageThree">
+          <img ng-click="toggleImageThree()" ng-src="images/Finley.jpg" height="350" alt=""/>
+        </span>
+        <span ng-hide="ImageThree">
+          <img ng-click="toggleImageThree()" ng-src="images/Finley College.jpg" height="350" alt=""/>
+        </span>
+        <div class="Likes">
+          <button id="3" ng-click="countThree(1)">Like</button>
+          <label>{{counterThree}} people like this!</label>
+        </div></td>
+      </tr>
+
+      <tr>
+        <td><span ng-show="ImageFour">
+          <img ng-click="toggleImageFour()" ng-src="images/Germany.jpg" height="350" width="410" alt=""/>
+        </span>
+        <span ng-hide="ImageFour">
+          <img ng-click="toggleImageFour()" ng-src="images/Rudi.jpg" height="350" width="410" alt=""/>
+        </span>
+        <div class="Likes">
+          <button id="4" ng-click="countFour(1)">Like</button>
+          <label>{{counterFour}} people like this!</label>
+        </div></td>
+
+        <td><span ng-show="ImageFive">
+          <img ng-click="toggleImageFive()" ng-src="images/Brian's Graduation.png" height="350" width="350" alt=""/>
+        </span>
+        <span ng-hide="ImageFive">
+          <img ng-click="toggleImageFive()" ng-src="images/Graduation.jpg" height="350" width="350" alt=""/>
+        </span>
+        <div class="Likes">
+          <button id="5" ng-click="countFive(1)">Like</button>
+          <label>{{counterFive}} people like this!</label>
+        </div></td>
+
+        <td><span ng-show="ImageSix">
+          <img ng-click="toggleImageSix()" ng-src="images/Softball.jpg" height="350" width="270" alt=""/>
+        </span>
+        <span ng-hide="ImageSix">
+          <img ng-click="toggleImageSix()" ng-src="images/Sports.jpg" height="350" width="270" alt=""/>
+        </span>
+        <div class="Likes">
+          <button id="6" ng-click="countSix(1)">Like</button>
+          <label>{{counterSix}} people like this!</label>
+        </div></td>
+      </table>
+    </div>
+  </body>
+  </html>
