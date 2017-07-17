@@ -1,86 +1,115 @@
 <!DOCTYPE html>
-<!-- Most basic Angular app -->
 <html>
+  <div class="container-fluid">
 <head>
   <meta charset="utf-8">
+  <meta http=equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weekend Four Challenge</title>
+  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-theme.css">
   <script type="text/javascript" src="vendors/angular.js"></script>
   <script type="text/javascript" src="scripts/client.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body ng-app="myApp">
-  <h1>My Gallery</h1>
-  <div ng-controller="ImageController as like">
-    <table align="center">
-      <tr>
-        <td><span ng-show="ImageOne">
-          <img ng-click="toggleImageOne()" ng-src="images/Kids.jpeg" height="350" width="425" alt=""/>
-        </span>
-        <span ng-hide="ImageOne">
-          <img ng-click="toggleImageOne()" ng-src="images/Afghanistan.jpg" height="350" width="425" alt=""/>
-        </span>
-        <div class="Likes">
-          <button id="1" ng-click="countOne(1)">Like</button>
-          <label>{{counterOne}} people like this!</label>
-        </div></td>
+      <h1>My Gallery</h1>
+    <div ng-controller="ImageController as message">
+      <table align="center">
+        <tr>
+          <td><span ng-show="ImageOne">
+            <img ng-click= "toggleImageOne()"; "viewCounterOne()" ng-src="images/Kids.jpeg" height="325" width="400" alt=""/>
+          </span>
+          <span ng-hide="ImageOne">
+            <img ng-click= "toggleImageOne()"ng-src="images/Afghanistan.jpg" height="325" width="400" alt=""/>
+          </span>
+          <div class="Views"><label>{{viewsOne}} views</label></div>
+          <div class="Likes">
+            <button class="btn btn-primary" ng-click="countOne(1)">Like</button>
+            <label>{{counterOne}} people like this!</label>
+          </div>
+          <input type="text" ng-model="comment">
+          <button class="btn btn-success" ng-click="message.addPerson(comment)">Add Comment</button>
+        </td>
 
         <td><span ng-show="ImageTwo">
-          <img ng-click="toggleImageTwo()" ng-src="images/Packer Game.jpg" height="350" width="225" alt=""/>
+          <img ng-click="toggleImageTwo()"; "viewCounterTwo()" ng-src="images/Packers Game.jpg" width-"300" height="325" alt=""/>
         </span>
         <span ng-hide="ImageTwo">
-          <img ng-click="toggleImageTwo()" ng-src="images/Packers.jpg" height="350" width="225" alt=""/>
+          <img ng-click="toggleImageTwo()" ng-src="images/Packers.jpg" width="300" height="325" alt=""/>
         </span>
+        <div class="Views"><label>{{viewsTwo}} views</label></div>
         <div class="Likes">
-          <button id="2" ng-click="countTwo(1)">Like</button>
+          <button class="btn btn-primary" ng-click="countTwo(1)">Like</button>
           <label>{{counterTwo}} people like this!</label>
-        </div></td>
+        </div>
+        <input type="text" ng-model="comment">
+        <button class="btn btn-success" ng-click="message.addPerson(comment)">Add Comment</button>
+      </td>
 
-        <td><span ng-show="ImageThree">
-          <img ng-click="toggleImageThree()" ng-src="images/Finley.jpg" height="350" alt=""/>
-        </span>
-        <span ng-hide="ImageThree">
-          <img ng-click="toggleImageThree()" ng-src="images/Finley College.jpg" height="350" alt=""/>
-        </span>
-        <div class="Likes">
-          <button id="3" ng-click="countThree(1)">Like</button>
-          <label>{{counterThree}} people like this!</label>
-        </div></td>
-      </tr>
+      <td><span ng-show="ImageThree">
+        <img ng-click="toggleImageThree()"; "viewCounterThree()" ng-src="images/Finley.jpg" height="325" alt=""/>
+      </span>
+      <span ng-hide="ImageThree">
+        <img ng-click="toggleImageThree()" ng-src="images/Finley College.jpg" height="325" alt=""/>
+      </span>
+      <div class="Views"><label>{{viewsThree}} views</label></div>
+      <div class="Likes">
+        <button class="btn btn-primary" ng-click="countThree(1)">Like</button>
+        <label>{{counterThree}} people like this!</label>
+      </div>
+      <input type="text" ng-model="comment">
+      <button class="btn btn-success" ng-click="message.addPerson(comment)">Add Comment</button>
+    </td>
+  </tr>
 
-      <tr>
-        <td><span ng-show="ImageFour">
-          <img ng-click="toggleImageFour()" ng-src="images/Germany.jpg" height="350" width="410" alt=""/>
-        </span>
-        <span ng-hide="ImageFour">
-          <img ng-click="toggleImageFour()" ng-src="images/Rudi.jpg" height="350" width="410" alt=""/>
-        </span>
-        <div class="Likes">
-          <button id="4" ng-click="countFour(1)">Like</button>
-          <label>{{counterFour}} people like this!</label>
-        </div></td>
-
-        <td><span ng-show="ImageFive">
-          <img ng-click="toggleImageFive()" ng-src="images/Brian's Graduation.png" height="350" width="350" alt=""/>
-        </span>
-        <span ng-hide="ImageFive">
-          <img ng-click="toggleImageFive()" ng-src="images/Graduation.jpg" height="350" width="350" alt=""/>
-        </span>
-        <div class="Likes">
-          <button id="5" ng-click="countFive(1)">Like</button>
-          <label>{{counterFive}} people like this!</label>
-        </div></td>
-
-        <td><span ng-show="ImageSix">
-          <img ng-click="toggleImageSix()" ng-src="images/Softball.jpg" height="350" width="270" alt=""/>
-        </span>
-        <span ng-hide="ImageSix">
-          <img ng-click="toggleImageSix()" ng-src="images/Sports.jpg" height="350" width="270" alt=""/>
-        </span>
-        <div class="Likes">
-          <button id="6" ng-click="countSix(1)">Like</button>
-          <label>{{counterSix}} people like this!</label>
-        </div></td>
-      </table>
+  <tr>
+    <td><span ng-show="ImageFour">
+      <img ng-click="toggleImageFour()"; "viewCounterFour()" ng-src="images/Germany.jpg" width="375" height="325" alt=""/>
+    </span>
+    <span ng-hide="ImageFour">
+      <img ng-click="toggleImageFour()" ng-src="images/Rudi.jpg" width="375" height="325" alt=""/>
+    </span>
+    <div class="Views"><label>{{viewsFour}} views</label></div>
+    <div class="Likes">
+      <button class="btn btn-primary" ng-click="countFour(1)">Like</button>
+      <label>{{counterFour}} people like this!</label>
     </div>
-  </body>
-  </html>
+    <input type="text" ng-model="comment">
+    <button class="btn btn-success" ng-click="message.addPerson(comment)">Add Comment</button>
+  </td>
+
+  <td><span ng-show="ImageFive">
+    <img ng-click="toggleImageFive()"; "viewCounterFive()" ng-src="images/Brian's Graduation.png" height="325" width="325" alt=""/>
+  </span>
+  <span ng-hide="ImageFive">
+    <img ng-click="toggleImageFive()" ng-src="images/Graduation.jpg" height="325" width="325" alt=""/>
+  </span>
+  <div class="Views"><label>{{viewsFive}} views</label></div>
+  <div class="Likes">
+    <button class="btn btn-primary" ng-click="countFive(1)">Like</button>
+    <label>{{counterFive}} people like this!</label>
+  </div>
+  <input type="text" ng-model="comment">
+  <button class="btn btn-success" ng-click="message.addPerson(comment)">Add Comment</button>
+</td>
+
+<td><span ng-show="ImageSix">
+  <img ng-click="toggleImageSix()"; "viewCounterSix()" ng-src="images/Sports.jpg" height="325" width="245" alt=""/>
+</span>
+<span ng-hide="ImageSix">
+  <img ng-click="toggleImageSix()" ng-src="images/Softball.jpg" height="325" width="245" alt=""/>
+</span>
+<div class="Views"><label>{{viewsSix}} views</label></div>
+<div class="Likes">
+  <button class="btn btn-primary" ng-click="countSix(1)">Like</button>
+  <label>{{counterSix}} people like this!</label>
+</div>
+<input type="text" ng-model="comment">
+<button class="btn btn-success" ng-click="message.addPerson(comment)">Add Comment</button>
+</td>
+</table>
+</div>
+</body>
+</html>
+</div>
