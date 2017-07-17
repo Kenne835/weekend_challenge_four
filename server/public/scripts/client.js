@@ -7,11 +7,10 @@ console.log(this);
   $scope.ImageOne = true;
   $scope.toggleImageOne = function() {
     $scope.ImageOne = $scope.ImageOne === true ? false: true;
-  };
-  $scope.viewsOne = 0;
-  $scope.viewCounterOne = function() {
     $scope.viewsOne ++;
   };
+  $scope.viewsOne = 0;
+
   $scope.counterOne = 0;
   $scope.countOne = function (inc) {
     $scope.counterOne += inc;
@@ -20,11 +19,10 @@ console.log(this);
   $scope.ImageTwo = true;
   $scope.toggleImageTwo = function() {
     $scope.ImageTwo = $scope.ImageTwo === true ? false: true;
-  };
-  $scope.viewsTwo = 0;
-  $scope.viewCounterTwo = function() {
     $scope.viewsTwo ++;
   };
+  $scope.viewsTwo = 0;
+
   $scope.counterTwo = 0;
   $scope.countTwo = function (inc) {
     $scope.counterTwo += inc;
@@ -34,11 +32,10 @@ console.log(this);
   $scope.ImageThree = true;
   $scope.toggleImageThree = function() {
     $scope.ImageThree = $scope.ImageThree === true ? false: true;
-  };
-  $scope.viewsThree = 0;
-  $scope.viewCounterThree = function() {
     $scope.viewsThree ++;
   };
+  $scope.viewsThree = 0;
+
   $scope.counterThree = 0;
   $scope.countThree = function (inc) {
     $scope.counterThree += inc;
@@ -48,11 +45,10 @@ console.log(this);
   $scope.ImageFour = true;
   $scope.toggleImageFour = function() {
     $scope.ImageFour = $scope.ImageFour === true ? false: true;
+      $scope.viewsFour ++;
   };
   $scope.viewsFour = 0;
-  $scope.viewCounterFour = function() {
-    $scope.viewsFour ++;
-  };
+
   $scope.counterFour = 0;
   $scope.countFour = function (inc) {
     $scope.counterFour += inc;
@@ -62,11 +58,10 @@ console.log(this);
   $scope.ImageFive = true;
   $scope.toggleImageFive = function() {
     $scope.ImageFive = $scope.ImageFive === true ? false: true;
-  };
-  $scope.viewsFive = 0;
-  $scope.viewCounterFive = function() {
     $scope.viewsFive ++;
   };
+  $scope.viewsFive = 0;
+
   $scope.counterFive = 0;
   $scope.countFive = function (inc) {
     $scope.counterFive += inc;
@@ -76,11 +71,10 @@ console.log(this);
   $scope.ImageSix = true;
   $scope.toggleImageSix = function() {
     $scope.ImageSix = $scope.ImageSix === true ? false: true;
-  };
-  $scope.viewsSix = 0;
-  $scope.viewCounterSix = function() {
     $scope.viewsSix ++;
   };
+  $scope.viewsSix = 0;
+
   $scope.counterSix = 0;
   $scope.countSix = function (inc) {
     $scope.counterSix += inc;
